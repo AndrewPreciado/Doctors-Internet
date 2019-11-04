@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lightbox/Modal Example</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<header>
+			<img class="banner-home" src="images/nature.jpg" alt="nature image">
+		</header>
+
+		<div class="container">		
+			<div class="row">
+				<div class="column">
+					<div onclick="openModal();currentSlide(1)">
+						<img src="images/rhino.jpg" width="100%" alt="rhino" class="hover-shadow">	
+					</div>
+				</div>	
+
+			  <div class="column">
+					<div onclick="openModal();currentSlide(2)">
+						<img src="images/tiger.jpg" width="100%" alt="tiger" class="hover-shadow">
+					</div>
+				</div>
+			  <div class="column">
+					<div onclick="openModal();currentSlide(3)">
+						<img src="images/polar_bear.jpg" width="100%" alt="polar bear" class="hover-shadow">
+					</div>
+			  </div>
+			  <div class="column">
+					<div onclick="openModal();currentSlide(4)">
+						<img src="images/panda.jpg" width="100%" alt="panda" class="hover-shadow">
+					</div>
+			  </div>
+				
+			</div>
+				
+			<div class="row">
+				<div class="column">
+					<div onclick="openModal();currentSlide(5)">
+						<img src="images/turtle.jpg" width="100%" alt="turtle" class="hover-shadow">	
+					</div>
+				</div>	
+			  <div class="column">
+					<div onclick="openModal();currentSlide(6)">
+						<img src="images/elephant.jpg" width="100%" alt="elephant" class="hover-shadow">
+					</div>
+				</div>
+			  <div class="column">
+					<div onclick="openModal();currentSlide(7)">
+						<img src="images/gorilla.jpg" width="100%" alt="gorilla" class="hover-shadow">
+					</div>
+			  </div>
+			  <div class="column">
+					<div onclick="openModal();currentSlide(8)">
+						<img src="images/leopard.jpg" width="100%" alt="leopard" class="hover-shadow">
+					</div>
+			  </div>
+			</div>
+			
+			<div class="row">
+				<div class="column">
+					<div onclick="openModal();currentSlide(9)">
+						<img src="images/chimp.jpg" width="100%" alt="chimp" class="hover-shadow">	
+					</div>
+				</div>	
+			  <div class="column">
+					<div onclick="openModal();currentSlide(10)">
+							<img src="images/whale.jpg" width="100%" alt="whale" class="hover-shadow">
+					</div>
+				</div>
+			  <div class="column">
+					<div onclick="openModal();currentSlide(11)">
+							<img src="images/dolphin.jpg" width="100%" alt="dolphin" class="hover-shadow">
+					</div>
+			  </div>
+			  <div class="column">
+					<div onclick="openModal();currentSlide(12)">
+							<img src="images/org.jpg" width="100%" alt="orangutan" class="hover-shadow">
+					</div>
+			  </div>
+			</div>
+		
+			
+			<!--MODAL/LIGHTBOX-->
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">X</span>
+				<div class="modal-content">
+		  			<div class="slides">
+						<div class="numbertext">1/12</div>
+						<img src="images/rhino.jpg" alt="rhino slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">2/12</div>
+						<img src="images/tiger.jpg" alt="tiger slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">3/12</div>
+						<img src="images/polar_bear.jpg" alt="polar bear slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">4/12</div>
+						<img src="images/panda.jpg" alt="panda slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">5/12</div>
+						<img src="images/turtle.jpg" alt="turtle slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">6/12</div>
+						<img src="images/elephant.jpg" alt="elephant slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">7/12</div>
+						<img src="images/gorilla.jpg" alt="gorilla slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">8/12</div>
+						<img src="images/leopard.jpg" alt="leopard slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">9/12</div>
+						<img src="images/chimp.jpg" alt="chimp slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">10/12</div>
+						<img src="images/whale.jpg" alt="whale slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">11/12</div>
+						<img src="images/dolphin.jpg" alt="dolphin slide" style="width: 50%">
+					</div>
+					<div class="slides">
+						<div class="numbertext">12/12</div>
+						<img src="images/org.jpg" alt="orangutan slide" style="width: 50%">
+					</div>
+					
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="caption-container">
+					  <p id="caption"></p>
+					</div>
+					
+					<!-- Thumbnail images -->
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/rhino.jpg" style="width: 100%" onclick="currentSlide(1)" alt="Rhino">		
+						</div >
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/tiger.jpg" style="width: 100%" onclick="currentSlide(2)" alt="Tiger">		
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/polar_bear.jpg" style="width: 100%" onclick="currentSlide(3)" alt="Polar Bear">		
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/panda.jpg" style="width: 100%" onclick="currentSlide(4)" alt="Panda">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/turtle.jpg" style="width: 100%" onclick="currentSlide(5)" alt="Turtle">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/elephant.jpg" style="width: 100%" onclick="currentSlide(6)" alt="Elephant">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/gorilla.jpg" style="width: 100%" onclick="currentSlide(7)" alt="Gorilla">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/leopard.jpg" style="width: 100%" onclick="currentSlide(8)" alt="Leopard">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/chimp.jpg" style="width: 100%" onclick="currentSlide(9)" alt="Chimpanzee">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/whale.jpg" style="width: 100%" onclick="currentSlide(10)" alt="Whale">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/dolphin.jpg" style="width: 100%" onclick="currentSlide(11)" alt="Dolphin">	
+						</div>
+						<div class="thumbnails">
+						  <img class="demo cursor" src="images/org.jpg" style="width: 100%" onclick="currentSlide(12)" alt="Orangutan">	
+						</div>
+					
+				</div> 
+				
+			</div>
+			
+		</div>
+		
+		<footer class="footer">
+			<div>To learn more please visit <a href="https://www.worldwildlife.org/" target="_blank">www.worldwildlife.org</a></div>
+		</footer>
+		
+	</div>
+	
+	<script>
+		function openModal(){
+			document.getElementById("myModal").style.display = "block";
+		}
+		
+		function closeModal() {
+		  	document.getElementById("myModal").style.display = "none";
+		}
+		
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("slides");
+		  var dots = document.getElementsByClassName("demo");
+		  var captionText = document.getElementById("caption");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  captionText.innerHTML = dots[slideIndex-1].alt;
+		}
+	</script>
+</body>
+</html>
